@@ -12,3 +12,4 @@ Rails.application.config.assets.version = '1.0'
 Rails.application.config.assets.precompile += %w( dash/partials/landlord_workorder.css )
 Rails.application.config.assets.precompile += %w( dash/landlord_workorder.js )
 Rails.application.config.assets.precompile += %w( dash/landlord_workorder_data.js )
+Rails.application.config.assets.precompile += %w( dash/jquery.geocomplete.min.js )
