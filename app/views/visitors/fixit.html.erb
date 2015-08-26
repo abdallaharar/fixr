@@ -1,0 +1,159 @@
+<% content_for :page_css do %>
+<%= stylesheet_link_tag "dash/partials/landlord_workorder" %>
+<% end %>
+<% content_for :page_js do %>
+<%= javascript_include_tag "dash/landlord_workorder" %>
+<%= javascript_include_tag "dash/landlord_workorder_data" %>
+<% end %>
+<div class="row">
+  <div class="steps col-md-12 m-b-20 p-b-20 m-r-40">
+    <div class="col-md-4 step1 text-center"><h3><span class="label label-default make-circle m-r-5">1</span>Select Issue</h3>
+    <p>Please select the options that best describe your issue.  </p>
+  </div>
+  <div class="col-md-4 lighten-50 step2 text-center"><h3><span class="label label-default make-circle m-r-5">2</span>Contact and Address</h3>
+  <p>Here you can confirm your details and add any additional notes/comments.</p></div>
+  <div class="col-md-4 lighten-50 step3 text-center"><h3><span class="label label-default make-circle m-r-5">3</span>You’re all done!</h3>
+  <p> We will be notifying a qualified professional for you.
+  </p>
+  </div>
+</div>
+</div>
+<hr class="col-sm-10 center-block">
+<div class="workorder container-fluid">
+<!-- header bar -->
+<div class="col-sm-12">
+    <button type='button' class='back btn btn-default pull-left'></button>
+
+    <h4 class="titleSelectIssue text-muted  m-l-15"> Select an issue from the list below:</h4>
+    <div class="paths col-xs-9 col-sm-11 m-t-10"></div>
+</div>
+<!-- displays path/button selections-->
+<div class="col-sm-12">
+<!--   <div class="row">
+    <div class="col-xs-2 col-sm-1"></div>
+  </div> -->
+  <div class="buttonbox col-sm-12 pad-35"></div>
+  <!-- section that appears in step 2 with form and path -->
+  <div class="confirmDetail clear center-block">
+    <div class="pathsConfirm col-md-6"></div>
+    <div class="form2 col-md-6 ">
+      <label class="formTitle" for='adddetail'><h4>Anything we missed? Let us know!</h4></label>
+      <textarea class="form-control confirmInput" name="issue" type='text' rows="3" placeholder='Please input additional details here'></textarea>
+    </div>
+  </div>
+  <!--  holds account and address details-->
+  <div class="details container">
+    <span class="contact m-t-30 col-md-6">
+      <h3 class="text-muted"> Contact Details <small style="font-size: 50%">click on your personal information to edit</small></h3>
+      <hr class="col-sm-7 no-m-t no-m-b">
+
+      <div class="checkcontact m-t-30">
+        <table class="table borderless">
+
+          <tr>
+            <td>First Name</td>
+            <td>  <%##= best_in_place @lprofile, :firstname, :url => update_via_bip_landlords_profile_path  %>
+</td>
+          </tr>
+          <tr>
+            <td>Last Name </td>
+            <td>  <%##=  best_in_place @lprofile, :lastname, :url => update_via_bip_landlords_profile_path, :place_holder => "Click To Edit"  %></td>
+          </tr>
+          <tr>
+            <td> Phone Number </td>
+            <td>  <%##=  best_in_place @lprofile, :phone ,:url => update_via_bip_landlords_profile_path, :place_holder =>  "Click To Edit" %></td>
+          </tr>
+          <tr>
+            <td> Contact Email </td>
+            <td>  <%##= @landlord.email  %></td>
+          </tr>
+        </table>
+      </div>
+    </span>
+    <span class="address m-t-30 col-md-6">
+      <h3 class="text-muted">Address Details </h3>
+      <hr class="col-sm-7 no-m-t no-m-b">
+      <div class="checkaddress col-sm-12">
+        <table class="table borderless">
+          <tr>
+            <td> Property Type</td>
+            <td> <%##= @property.property_type.humanize  %></td>
+          </tr>
+          <tr>
+            <td>Address</td>
+            <td><%##= @property.address  %></td>
+          </tr>
+          
+          <%##unless @property.sublocality.blank? %>
+          <tr>
+            <td>Region</td>
+            <td>  <%##= @property.sublocality   %></td>
+          </tr>
+          <%## end %>
+          <tr>
+            <td>City</td>
+            <td><%##= @property.locality  %></td>
+          </tr>
+          
+          <tr>
+            <td>Province</td>
+            <td>  <%##= @property.state  %></td>
+          </tr>
+          <tr>
+            <td>Postal Code</td>
+            <td>  <%##= @property.postal_code  %></td>
+          </tr>
+        </table>
+        
+      </div>
+    </span>
+  </div>
+</div>
+<!--  completion svg -->
+<div class="col-md-10 complete center-block blocks" style="display: none;">
+  <div class="col-sm-8 col-md-8 col-lg-8 center-block">
+    <h1 class="text-muted text-center">TurnKii is completing your request</h1>
+    <hr>
+    <h5 class="text-muted text-center">If you have any issues or want to cancel an appointment, feel free to contact us at help@turnkii.com or call us at 1888-456-0464! </h5>
+  </div>
+  <div class="checkmark m-b-20" >
+    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+      viewBox="0 0 130.7 130.7" enable-background="new 0 0 130.7 130.7" xml:space="preserve">
+      <circle class="path" fill="none" stroke="#2ecc71" stroke-width="4" stroke-miterlimit="10" cx="65.3" cy="65.3" r="62.1"/></circle>
+      <path class="path" fill="none" stroke="#2ecc71" stroke-miterlimit="10" d="M425.9,21.6L425.9,21.6c-2.2-2.6-6-2.6-8.3-0.1l-42.7,46.2l-14.3-16.4
+        c-2.3-2.7-6.2-2.7-8.6-0.1c-1.9,2.1-2,5.6-0.1,7.7l17.6,20.3c0.2,0.3,0.4,0.6,0.6,0.9c1.8,2,4.4,2.5,6.6,1.4c0.7-0.3,1.4-0.8,2-1.5
+        c0.3-0.3,0.5-0.6,0.7-0.9L425.8,29C427.7,27,427.7,23.6,425.9,21.6z"/>
+        <polyline class="path" fill="none" stroke="#2ecc71" stroke-width="6" stroke-linecap="round" stroke-miterlimit="10" points="97.7,37.5
+        58.8,93.1 32.9,71.2 "/></polyline></path>
+      </svg>
+    </div>
+
+    <%#= link_to("Finish", landlords_property_path(@property.propertyid) , class: "btn btn-info btn-lg col-sm-4 col-md-3 center-block") %>
+  </div>
+  <!-- additional details form -->
+  <div class="form col-sm-10 center-block clear">
+    <label class="formTitle p-t- m-b-10" for='adddetail'><h4>Anything we missed? Let us know!</h4></label>
+    <textarea class="form-control adddetail" id='adddetail' name="issue" type='text' rows="5" placeholder='Please input additional details here'></textarea>
+    <button type='button' class='submit btn btn-success col-sm-4 col-md-3 center-block btn-lg'>Next <i class="fa fa-angle-double-right"></i></button>
+  </div>
+  <%#= form_for @workorder , url: landlords_property_workorders_path(@property.propertyid),remote:true  do |f| %>
+  <%#= f.hidden_field :category , class: "primaryinput"  %>
+  <%#= f.hidden_field :issue_object , class: "secondaryinput"  %>
+  <%#= f.hidden_field :detail_lvl_one , class: "tertiaryinput"  %>
+  <%#= f.hidden_field :detail_lvl_two , class: "finalinput"  %>
+  <%#= f.hidden_field :notes , class: "userinput"  %>
+  <%#= f.submit "Confirm & Submit" , class: "next btn btn-lg btn-success col-sm-3 center-block" %>
+  <%# end %>
+  <!--   <div class="backgroundinput">
+    <p> Primary selection - General area of issue</p>
+    <input type="text" class="form-control primaryinput">
+    <p> Secondary selection</p>
+    <input type="text" class="form-control secondaryinput">
+    <p> Tertiary selection</p>
+    <input type="text" class="form-control tertiaryinput">
+    <p> Final selection</p>
+    <input type="text" class="form-control finalinput">
+    <p> User input</p>
+    <input type="text" class="form-control userinput">
+  </div> -->
+</div>

@@ -1,0 +1,203 @@
+.back .fa {
+    color: #3498db;
+}
+
+.primary {
+    min-height: 25vh;
+    border: 1px solid transparent !important;
+    background-color: transparent !important;
+}
+.paths, .pathsConfirm{
+    padding-left: 70px;
+    font-size:14px;
+}
+
+.next,
+.submit{
+    margin-top: 20px;
+}
+
+.confirmDetail{
+    padding: 20px;
+    clear:both;
+}
+
+.center-margins{
+    margin:0 auto;
+}
+.primary:active,
+.primary:focus,
+.primary:hover {
+    background-color: transparent !important;
+    border: 1px solid transparent !important;
+}
+.primary:active {
+    box-shadow: rgba(0, 0, 0, 0.121569) 2px 2px 6px 2px inset !important;
+    border: 1px solid silver !important;
+}
+.not-primary {
+    margin: 10px !important;
+    min-height: 12em !important;
+    border-radius: 10px !important;
+    border-color: #3498db !important;
+    background-color: #3498db !important;
+    color: white !important;
+}
+
+.not-primary:hover {
+    background-color: transparent !important;
+    color: #3498db !important;
+    border-color: #3498db !important;
+    -webkit-transition: all 0.20s linear;
+    -moz-transition: all 0.20s linear;
+    -o-transition: all 0.20s linear;
+    transition: all 0.20s linear;
+}
+
+.active { /*for non-primary buttons*/
+    background-color: transparent !important;
+    color: #3498db !important;
+    border-color: #3498db !important;
+}
+.back {
+    border-radius: 200% !important;
+    background-color: transparent !important;
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+}
+.contact, .address{
+    height: 350px;
+}
+// .contact{
+//     border-right: 1px solid silver;
+// }
+
+.details td{
+    padding-bottom: 10px;
+}
+
+.workorder .disabled {
+    opacity: 1 !important;
+    cursor: auto !important;
+}
+
+.issuename {
+    font-size: 20px;
+    font-family: 'Open Sans';
+    white-space: pre-wrap;
+}
+.backgroundinput > p {
+    display: block;
+    clear: both;
+    font-weight: bold;
+    padding-top: 15px;
+    margin: 10px;
+}
+.titleSelectIssue {
+    font-family: 'Open Sans' !important;
+    display: inline-block;
+    font-weight: bold;
+}
+
+.contact > h2, .address >h2 {
+    padding-left:30px;
+}
+
+td:first-child{
+    padding-right:20px;
+    font-weight: bold;
+}
+
+button > svg {
+    width: 8em !important;
+    height: 8em;
+    fill: #3498db;
+    stroke-color: #3498db;
+    padding-bottom: 10px;
+}
+.buttonbox path,
+.buttonbox circle,
+.buttonbox polygon {
+    fill: #3498db !important;
+}
+
+.buttonbox .primary:hover path,
+.buttonbox .primary:hover circle,
+.buttonbox .primary:hover polygon,
+.buttonbox .primary:hover svg {
+    fill: RGB(132, 196, 62)!important;
+    -webkit-transition: all 0.20s linear;
+    -moz-transition: all 0.20s linear;
+    -o-transition: all 0.20s linear;
+    transition: all 0.20s linear;
+}
+
+.formTitle {
+    font-size: 17px;
+    clear: both;
+    display: block;
+}
+
+/* scale and fade */
+
+
+.pt-page-scaleUp {
+    -webkit-animation: scaleUp .5s ease both;
+    animation: scaleUp .5s ease both;
+}
+.pt-page-scaleUpDown {
+    -webkit-animation: scaleUpDown 0.3s ease both;
+    animation: scaleUpDown 0.3s ease both;
+}
+.pt-page-scaleDownCenter {
+    -webkit-animation: scaleDownCenter .3s ease-in both;
+    animation: scaleDownCenter .3s ease-in both;
+}
+
+/********************************* keyframes **************************************/
+
+
+/* scale and fade */
+
+@-webkit-keyframes scaleUp {
+    from {
+        opacity: 0;
+        -webkit-transform: scale(.8);
+    }
+}
+@keyframes scaleUp {
+    from {
+        opacity: 0;
+        -webkit-transform: scale(.8);
+        transform: scale(.8);
+    }
+}
+@-webkit-keyframes scaleUpDown {
+    from {
+        opacity: 0;
+        -webkit-transform: scale(1.1);
+    }
+}
+@keyframes scaleUpDown {
+    from {
+        opacity: 0;
+        -webkit-transform: scale(1.1);
+        transform: scale(1.2);
+    }
+}
+@-webkit-keyframes scaleDownCenter {
+    from {}
+    to {
+        opacity: 0;
+        -webkit-transform: scale(.7);
+    }
+}
+@keyframes scaleDownCenter {
+    from {}
+    to {
+        opacity: 0;
+        -webkit-transform: scale(.7);
+        transform: scale(.7);
+    }
+}
