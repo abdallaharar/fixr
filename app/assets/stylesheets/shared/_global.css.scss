@@ -1,0 +1,165 @@
+$primary-font:'Open Sans',
+sans-serif;
+$secondary-font:'Roboto',
+sans-serif;
+$teal:#1abc9c;
+$ltblue: #3498db;
+$blue:#0288D1;
+$green:#2EBE6B;
+
+.btnshadow{
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+}
+
+.aliased {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.primary-font {
+    font-family: 'Open Sans', sans-serif!important;
+    font-weight: 100;
+}
+
+.secondary-font {
+    font-family: 'Roboto', sans-serif!important;
+    font-weight: 100;
+}
+
+.hover-underline {
+    padding-top: 10px;
+    &:before {
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 2px;
+        background: #333;
+        transform: scaleX(0);
+    }
+    &:hover:before {
+        transform: scaleX(1);
+    }
+}
+
+.hvr-underline-from-left:before {
+    height: 1.5px;
+}
+
+@mixin hardbtn($color) {
+    -moz-box-shadow: 2px 2px 0px darken($color, 10%);
+    -webkit-box-shadow: 2px 2px 0px darken($color, 10%);
+    box-shadow: 2px 2px 0px darken($color, 10%);
+}
+
+@mixin overlaybg($color, $img, $pos, $height) {
+    background: $color, $img $pos;
+    height: $height;
+    background-repeat: repeat, no-repeat;
+    background-position: center;
+    -webkit-background-size: 100%, cover;
+    background-size: 100%, cover;
+}
+
+@mixin custombtn($color, $font-size) {
+    background: darken($color, 3%);
+    color: white;
+    font-size: $font-size;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+    border: none;
+    padding: 10px 20px;
+
+    &:hover{
+    background: darken($color, 5%);
+
+    }
+}
+
+.centered-x {
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translate(-50%, 0);
+    -moz-transform: translate(-50%, 0);
+    -ms-transform: translate(-50%, 0);
+    -o-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+}
+
+.centered-axis-xy {
+    position: absolute!important;
+    left: 50%!important;
+    ;
+    top: 50%!important;
+    ;
+    -webkit-transform: translate(-50%, -50%)!important;
+    ;
+    -moz-transform: translate(-50%, -50%)!important;
+    ;
+    -ms-transform: translate(-50%, -50%)!important;
+    ;
+    -o-transform: translate(-50%, -50%)!important;
+    ;
+    transform: translate(-50%, -50%)!important;
+    ;
+}
+
+.centered-axis-y {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translatey(-50%);
+    -moz-transform: translatey(-50%);
+    -ms-transform: translatey(-50%);
+    -o-transform: translatey(-50%);
+    transform: translatey(-50%);
+}
+
+.make-circle {
+    border-radius: 50%;
+}
+
+.modal {
+    // top: 60px;
+    /*! adjust transition time */
+    
+    -webkit-transition: all 0.2s ease-in-out !important;
+    -moz-transition: all 0.2s ease-in-out !important;
+    -o-transition: all 0.2s ease-in-out !important;
+    transition: all 0.2s ease-in-out !important;
+}
+
+.modal.in .modal-dialog {
+    /*! editthis transform to any transform you want */
+    
+    -webkit-transform: scale(1.1, 1.1) !important;
+    -ms-transform: scale(1.1, 1.1) !important;
+    transform: scale(1.1, 1.1) !important;
+}
+
+.modal.fade .modal-dialog {
+    /*! disable sliding from left/right/top/bottom */
+    
+    -webkit-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    transform: translate(0, 0);
+}
+
+.lighten-50 {
+    opacity: 0.50;
+}
+
+.lighten-25 {
+    opacity: 0.75;
+}
+
+.clear {
+    clear: both
+}
+
+.btnshadow {
+    -moz-box-shadow: 0px 2px 21px #d6d6d6;
+    -webkit-box-shadow: 0px 2px 21px #d6d6d6;
+    box-shadow: 0px 2px 21px #d6d6d6;
+}
+
+.borderless td, .borderless th {
+    border: none!important;
+}

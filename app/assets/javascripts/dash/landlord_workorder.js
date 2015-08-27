@@ -168,6 +168,7 @@ $(document).ready(function () {
     }
 
     function initialize() {
+        $(".buttonbox").empty();
         //creates primary menu buttons
         for (i = 0; i < issues.length; i++) {
             var index = issues[i].name;
@@ -286,7 +287,7 @@ $(document).ready(function () {
 
         }  else if (stage == 5) { //confirm account details/address page going back the Issue selection form
 
-
+$(".details").hide();
             //highlights current step ( 1 2 3)
             $(".step1").removeClass("lighten-50");
             $(".step2").addClass("lighten-50");

@@ -7,6 +7,9 @@
     <%= stylesheet_link_tag 'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
     <%= csrf_meta_tags %>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Roboto:300,100' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
         <%= yield :page_css %>
 
   </head>
@@ -19,6 +22,5 @@
        <%= yield %>
     </main>
   </body>
-          <%= yield :page_js %>
-
+  <%= yield :page_js %>
 </html>

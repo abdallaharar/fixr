@@ -8,17 +8,15 @@ class CreateWorkorders < ActiveRecord::Migration
             t.string :property_name
             t.string :address
             t.string :street_number
-            t.string :street_name
+            t.string :route
             t.string :postal_code
             t.string :locality
             t.string :sublocality
-            t.string :state
+            t.string :administrative_area_level_1
             t.string :country
             t.string :formatted_address
-            t.decimal :latitude , :precision => 15, :scale => 10
-            t.decimal :longitude , :precision => 15, :scale => 10
-            t.string :place_id
-
+            t.decimal :lat , :precision => 15, :scale => 10
+            t.decimal :lng , :precision => 15, :scale => 10
             t.string :category
             t.string :issue_object
             t.string :detail_lvl_one

@@ -1,6 +1,9 @@
 // import the CSS framework
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300);
+@import url(https://fonts.googleapis.com/css?family=Roboto:300,100);
+@import "shared/global";
 
 // make all images responsive by default
 img {
@@ -35,7 +38,7 @@ img {
 // to make views framework-neutral
 main {
   @extend .container;
-  background-color: #eee;
+  background-color: #fff;
   padding-bottom: 80px;
   width: 100%;
   margin-top: 51px; // accommodate the navbar
