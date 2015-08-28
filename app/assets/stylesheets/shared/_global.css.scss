@@ -1,3 +1,4 @@
+@import 'shared/deputy.min.css';
 $primary-font:'Open Sans',
 sans-serif;
 $secondary-font:'Roboto',
@@ -119,7 +120,7 @@ $green:#2EBE6B;
 .modal {
     // top: 60px;
     /*! adjust transition time */
-    
+
     -webkit-transition: all 0.2s ease-in-out !important;
     -moz-transition: all 0.2s ease-in-out !important;
     -o-transition: all 0.2s ease-in-out !important;
@@ -128,7 +129,7 @@ $green:#2EBE6B;
 
 .modal.in .modal-dialog {
     /*! editthis transform to any transform you want */
-    
+
     -webkit-transform: scale(1.1, 1.1) !important;
     -ms-transform: scale(1.1, 1.1) !important;
     transform: scale(1.1, 1.1) !important;
@@ -136,7 +137,7 @@ $green:#2EBE6B;
 
 .modal.fade .modal-dialog {
     /*! disable sliding from left/right/top/bottom */
-    
+
     -webkit-transform: translate(0, 0);
     -ms-transform: translate(0, 0);
     transform: translate(0, 0);
