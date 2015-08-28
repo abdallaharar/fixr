@@ -1,12 +1,12 @@
+body{
+    font-family:'Open Sans'
+}
+
+
 .form {
     left: 50%;
     transform: translateX(-50%);
 }
-button.submit {
-    left:50%;
-    transform: translateX(-50%);
-}
-
 .back .fa {
     color: #3498db;
 }
@@ -24,6 +24,8 @@ button.submit {
 .next,
 .submit{
     margin-top: 20px;
+    left:50%;
+    transform: translateX(-50%);
 }
 
 .confirmDetail{

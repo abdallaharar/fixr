@@ -1,0 +1,212 @@
+<% content_for :page_css do %>
+<%= stylesheet_link_tag "dash/partials/main" %>
+<%= stylesheet_link_tag "dash/partials/style" %>
+<% end %>
+<% content_for :page_js do %>
+<%= javascript_include_tag "dash/util" %>
+<%= javascript_include_tag "dash/main" %>
+<%= javascript_include_tag "dash/jquery.scrolly.min" %>
+<%#= javascript_include_tag "dash/skel.min" %>
+<% end %>
+
+
+
+<section id="header">
+    <div class="inner">
+        <span class="icon major fa-wrench"></span>
+        <h1>
+        Exprienced Service Professionals. Clicks. Away </h1>
+        <ul class="actions">
+            <li><a href="#one" class="button scrolly">Find a Service Professional</a></li>
+        </ul>
+    </div>
+</section>
+<!-- One -->
+<section id="one" class="container-fluid p-t-100 p-b-25">
+<div class="col-md-10 center-block">
+    <h1 class="heading">
+    Introducing FixIt, the smartest and most efficient way to find professional service workers.
+</h1>
+    <h3 class="container f-s-15 text-center">  After you submit your request, we contact <strong>thousands</strong> of service professionals and notify you when they reply back. <br><i> Skip the hassle of repeatedly explaining what needs to be done, try FixIt today!</i></h3>
+
+<!--     <div class="icons">
+        <span class="icon style1 major p-30 fa-clock-o"></span>
+        <span class="icon style2 major p-30 fa-bolt"></span>
+        <span class="icon style3 major p-30 fa-home"></span>
+        <span class="icon style4 major p-30 fa-cog"></span>
+        <span class="icon style5 major p-30 fa-wrench"></span>
+        <span class="icon style6 major p-30 fa-calendar"></span>
+    </div> -->
+
+    <div class="row p-t-20">
+        <div class="col-xs-12 col-sm-4">
+            
+            <%= image_tag "1.png", :class=>"step-num-img" %>
+            <h3 class="step-text">
+            LET US KNOW WHAT YOU NEED
+        </h3>
+            <p class="text-center p-l-20 p-r-20 f-s-20">
+                Book online in 60 seconds and schedule your home service for as early as tomorrow
+            </p>
+        </div>
+        <div class="col-xs-12 col-sm-4">
+            <%= image_tag "2.png", :class=>"step-num-img" %>
+            <h3 class="step-text">
+            PROFESSIONALS CONTACT YOU
+        </h3>
+            <p class="text-center p-l-20 p-r-20 f-s-20"> Handy professionals are exprienced, friendly, background checked and insured
+            </p>
+        </div>
+        <div class="col-xs-12 col-sm-4">
+            <%= image_tag "3.png", :class=>"step-num-img" %>
+            <h3 class="step-text">
+            YOU ARE ALL DONE!
+        </h3>
+            <p class="text-center p-l-20 p-r-20 f-s-20">
+                If you are not happy with our work, we will refund your money. It's as simple as that.
+        </div>
+    </div>
+
+</div>
+</section>
+<section id="call-to-action">
+    <button href="#one" class="actions button call-to-action-btn scrolly">Find a Service Professional</button>
+</section>
+<!-- <section class="" data-scroll-reveal="enter from the top after 0.3s, move 10px, over 0.5s" data-scroll-reveal-id="6" data-scroll-reveal-initialized="true" data-scroll-reveal-complete="true"> -->
+    
+
+
+  <div class='quotes row'>
+    <div class='col-md-offset-2 col-md-8'>
+      <div class="carousel slide" data-ride="carousel" id="quote-carousel">
+        <!-- Bottom Carousel Indicators -->
+        <ol class="carousel-indicators">
+          <li data-target="#quote-carousel" data-slide-to="0" class="active"></li>
+          <li data-target="#quote-carousel" data-slide-to="1"></li>
+          <li data-target="#quote-carousel" data-slide-to="2"></li>
+        </ol>
+        
+        <!-- Carousel Slides / Quotes -->
+        <div class="carousel-inner">
+        
+          <!-- Quote 1 -->
+          <div class="item active">
+            <blockquote>
+              <div class="row">
+                <div class="col-sm-3 text-center">
+                  <img class="img-circle" src="http://www.reactiongifs.com/r/overbite.gif" style="width: 100px;height:100px;">
+                  <!--<img class="img-circle" src="https://s3.amazonaws.com/uifaces/faces/twitter/kolage/128.jpg" style="width: 100px;height:100px;">-->
+                </div>
+                <div class="col-sm-9">
+                  <p>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit!</p>
+                  <small>Someone famous</small>
+                </div>
+              </div>
+            </blockquote>
+          </div>
+          <!-- Quote 2 -->
+          <div class="item">
+            <blockquote>
+              <div class="row">
+                <div class="col-sm-3 text-center">
+                  <img class="img-circle" src="https://s3.amazonaws.com/uifaces/faces/twitter/mijustin/128.jpg" style="width: 100px;height:100px;">
+                </div>
+                <div class="col-sm-9">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam auctor nec lacus ut tempor. Mauris.</p>
+                  <small>Someone famous</small>
+                </div>
+              </div>
+            </blockquote>
+          </div>
+          <!-- Quote 3 -->
+          <div class="item">
+            <blockquote>
+              <div class="row">
+                <div class="col-sm-3 text-center">
+                  <img class="img-circle" src="https://s3.amazonaws.com/uifaces/faces/twitter/keizgoesboom/128.jpg" style="width: 100px;height:100px;">
+                </div>
+                <div class="col-sm-9">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut rutrum elit in arcu blandit, eget pretium nisl accumsan. Sed ultricies commodo tortor, eu pretium mauris.</p>
+                  <small>Someone famous</small>
+                </div>
+              </div>
+            </blockquote>
+          </div>
+        </div>
+        
+        <!-- Carousel Buttons Next/Prev -->
+        <a data-slide="prev" href="#quote-carousel" class="left carousel-control"><i class="fa fa-chevron-left"></i></a>
+        <a data-slide="next" href="#quote-carousel" class="right carousel-control"><i class="fa fa-chevron-right"></i></a>
+      </div>                          
+    </div>
+  </div>
+
+
+
+
+
+<!--     <div class="row">
+        <div class="col-md-offset-1 col-md-10">
+            <div class="carousel slide" data-ride="carousel" id="quote-carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#quote-carousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#quote-carousel" data-slide-to="1" class=""></li>
+                    <li data-target="#quote-carousel" data-slide-to="2" class=""></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <blockquote>
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <img class="img-circle" src="https://s3.amazonaws.com/uifaces/faces/twitter/madedigital/128.jpg" style="width: 150px;height:150px;"> </div>
+                                <div class="col-sm-9">
+                                    <p>This looks great! I can’t wait to start using it. Finally, there is an alternative to finding a service worker who is an expert in exactly what I need. </p>
+                                    <small>Josh K</small>
+                                </div>
+                            </div>
+                        </blockquote>
+                    </div>
+                    <div class="item">
+                        <blockquote>
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <img class="img-circle" src="https://s3.amazonaws.com/uifaces/faces/twitter/katiefritz/128.jpg" style="width: 150px;height:150px;"> </div>
+                                <div class="col-sm-9">
+                                    <p>I can’t wait to start tracking my investment finances and increase my cashflow with TurnKii. Keeping track of my finances was such a hassle before. I Can’t wait to start using the TurnKii service and platform.</p>
+                                    <small>Megan J.</small>
+                                </div>
+                            </div>
+                        </blockquote>
+                    </div>
+                    <div class="item">
+                        <blockquote>
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <img class="img-circle" src="https://s3.amazonaws.com/uifaces/faces/twitter/jedbridges/128.jpg" style="width: 150px;height:150px;"> </div>
+                                <div class="col-sm-9">
+                                    <p>This looks amazing! I like finding new investment properties, but managing those properties is my nightmare. TurnKii will free me up to do more of what I love!</p>
+                                    <small>Peter L.</small>
+                                </div>
+                            </div>
+                        </blockquote>
+                    </div>
+                </div> <a data-slide="prev" href="#quote-carousel" class="left carousel-control"><i class="fa fa-chevron-left"></i></a> <a data-slide="next" href="#quote-carousel" class="right carousel-control"><i class="fa fa-chevron-right"></i></a> </div>
+        </div>
+    </div> -->
+<!-- </section> -->
+<!-- Footer -->
+<footer class="footer bg-midnight-blue">
+    <div class="col-md-10 center-block">
+
+        <div class="row">
+            <div class="col-sm-12">
+                <h1 class="lead"> FixIt</h1>
+                <h4> Bridging the gap between professional service workers and home-owners</h4>
+            </div>
+        </div>
+        <div class="row">
+            <hr>
+            <div class="col-sm-12 additional-links"> <a href="/termofservice">Terms of Service</a> | <a href="/privacypolicy">Privacy Policy</a> </div>
+        </div>
+        </div>
+</footer>
